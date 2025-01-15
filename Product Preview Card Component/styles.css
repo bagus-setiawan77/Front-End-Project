@@ -1,0 +1,84 @@
+:root{
+    --background-color: #ffffff;
+    --primary-color: #8293f2;
+    --secondary-color: #aab5f4;
+    --text-color: #3e4e83;
+    --accent-color: #cfd5f8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+}
+
+.container{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-color: var(--background-color);
+    border-radius: 20px;
+}
+
+.left img{
+    border-radius: 20px 0 0 20px;
+}
+
+.right{
+    padding: 10px;
+    margin: 20px 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right h5{
+    font-size: 1rem;
+}
+
+.right .price{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.right .discount{
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.right button{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+
+.right button span{
+    color: var(--background-color);
+}
+
+.right button span:first-child{
+    font-size: 1.2rem;
+}
+
+.right button span:last-child{
+    font-weight: bold;
+}
