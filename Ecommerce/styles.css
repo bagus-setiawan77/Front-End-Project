@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color:#53a7db;   
+    --secondary-color:#53a7db;
+    --light-color: #bce6ff;
+    --dark-color: #2d82b5;
+    --black-color: #015c92;
+    --accent-color: #88cdf6;
+    --text-color:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    margin: 15px 0 20px 0;
+}
+
+
+/* ===== Helper ===== */
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: var(--black-color);
+    background-color: var(--text-color);
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .2s ease;
+}
+
+button.white{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    outline: none;
+    transition: .2s ease;
+}
+
+body{
+    width: 100%;
+}
+
+/* ===== Header Start ===== */
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: var(--dark-color);
+    color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: .3s ease;
+}
+
+#navbar li a:hover, #navbar li a.active{
+    color: var(--light-color);
+}
+
+#navbar li a.active::after, #navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--light-color);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* ===== Home Page ===== */
+
+#hero{
+    /* background-position: url("");
+    background-position: top 25% right 0;
+    background-size: cover; */
+    background-color: var(--light-color);
+    padding: 0 80px;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: var(--black-color);
+}
+
+#hero button{
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: .3s ease;
+    color: var(--black-color);
+}
+
+#hero button:hover{
+    color: var(--text-color);
+    background-color: var(--black-color);
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--light-color);
+    border-radius: 20px;
+    /* margin: 15px 0; */
+}
+
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 34px rgba(70, 62, 221, 0.03);
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 10px;
+    /* line-height: 1; */
+    border-radius: 12px;
+    color: var(--text-color);
+    background-color: var(--dark-color);
+}
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid var(--light-color);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: .3s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: var(--black-color);
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: black;
+    font-size: 15px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: var(--dark-color);
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 800;
+    color: black;
+}
+
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 41px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--black-color);
+    border: 1px solid var(--text-color);
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 40vh;
+}
+
+#banner h4{
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+#banner h2{
+    color: var(--text-color);
+    font-size: 50px;
+    padding: 10px 0;
+}
+
+#banner span{
+    color: var(--black-color);
+}
+
+#banner button:hover{
+    background-color: var(--black-color);
+    color: var(--text-color);
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    min-width: 850px;
+    height: 50vh;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#sm-banner h4{
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+#sm-banner h2{
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#sm-banner span{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 15px 0;
+}
+
+#sm-banner .banner-box:hover button{
+    background-color: var(--text-color);
+    color: var(--black-color);
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--black-color);
+    min-width: 30%;
+    height: 30vh;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 h2{
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+#banner3 h3{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+#newsletter h4{
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#newsletter p{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+#newsletter p span{
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-content: center;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 20px 0 0 20px;
+}
+
+#newsletter button{
+    background-color: var(--black-color);
+    color: var(--text-color);
+    border-radius: 0 20px 20px 0;
+    white-space: nowrap;
+    padding: 10px 20px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
