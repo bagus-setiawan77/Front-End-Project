@@ -531,10 +531,16 @@ footer .col{
 
 #prodetails .single-pro-details h4{
     padding: 40px 0 20px 0;
+    font-size: 1.5rem;
 }
 
 #prodetails .single-pro-details h2{
-    font-size: 26px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#prodetails .single-pro-details h6{
+    font-size: 32px;
 }
 
 #prodetails .single-pro-details select{
@@ -552,9 +558,13 @@ footer .col{
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 10px;
-    outline: none;
+    /* outline: none; */
     border: 1px solid var(--black-color);
     text-align: center;
+}
+
+#prodetails .single-pro-details input:focus{
+    outline: none;
 }
 
 #prodetails .single-pro-details button{
@@ -570,6 +580,10 @@ footer .col{
     color: white;
 }
 
+#prodetails .single-pro-details{
+    line-height: 25px;
+    font-size: 1.2rem;
+}
 
 /* ===== START MEDIA QUERY ===== */
 
@@ -675,7 +689,36 @@ footer .col{
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    }   
+
+}
+
+@media (max-width: 477px){
+
+
+    /* ===== SINGLE PRODUCT ===== */
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
     }
 
-    
+    #prodetails .single-pro-image{
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    #prodetails .single-pro-details {
+        line-height: 25px;
+        font-size: 1.2rem;
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .section-p1 {
+        padding: 20px 20px;
+    }
 }
