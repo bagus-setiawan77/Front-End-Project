@@ -389,7 +389,7 @@ body{
 #loadingbar.active{
     margin-left: 190px;
     transition: .5s ease all;
-    width: calc(125% - 10%);
+    width: calc(100% + 190px);
 }
 
 
