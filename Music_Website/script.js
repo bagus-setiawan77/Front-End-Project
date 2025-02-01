@@ -5,6 +5,7 @@ const header = document.getElementById("header");
 const main = document.getElementById('main');
 const footer = document.getElementById('footer');
 const playlist = document.getElementById('playlist');
+const loadingbar = document.getElementById("loadingbar");
 
 if(menu){
     menu.addEventListener('click', () => {
@@ -13,6 +14,7 @@ if(menu){
         header.classList.add('active');
         main.classList.add('active');
         footer.classList.add('active');
+        loadingbar.classList.add("active");
     })
 }
 
@@ -23,5 +25,6 @@ if (close) {
         header.classList.remove("active");
         main.classList.remove("active");
         footer.classList.remove("active");
+        loadingbar.classList.remove("active");
     });
 }
