@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bg-green: #006241;
+    --bg-green-dark: #1e3932;
+    --bg-green-light: #00754a;
+    --bg-green-lighter : #d4e9e2;
+    --yellow: #eed350;
+    --light-blue: #b6cbd5;
+    --coral: #d3705a;
+    --teal: #005e66;
+    --turquois: #4c9f87;
+    --goldenro: #c89543;
+    --spring-green: #c0d48b;
+    --blush: #edc4c9;
+
+    --colorWhite: #fff;
+    --colorTexBlack: rgba(0, 0, 0, .87);
+    --colorTextBlackSoft: rgba(0, 0, 0, .58);
+    --colorGreenAccent: #00754a;
+
+    --fs-XXL : 50px;
+    --fs-XL : 24px;
+    --fs-L : 19px;
+    --fs-M: 16px;
+    --fs-S: 14px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ===== HELPER ===== */
+
+.section-m1{
+    margin-top: 10px;
+}
+
+.section-m2{
+    margin-top: 20px;
+}
+
+.section-p1{
+    padding-top: 10px;
+}
+
+.section-p2{
+    padding-top: 20px;
+}
+
+/* ===== NAVBAR =====*/
+
+#navbar{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    background-color: var(--colorWhite);
+    color: var(--colorTexBlack);
+    font-size: var(--fs-M);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .05);
+}
+
+/* nav-logo */
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img{
+    border-radius: 50%;
+}
+
+/* nav-location */
+
+.nav-location{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-left: 20px;
+}
+
+.nav-location:hover{
+    color: var(--colorGreenAccent);
+}
+
+.nav-location i{
+    cursor: pointer;
+}
+
+.nav-location h3{
+    cursor: pointer;
+}
+
+/* nav-search */
+
+.nav-search{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-search .searchbar{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.nav-search .searchbar:hover{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.nav-search .searchbar i{
+}
+
+.nav-search .searchbar input{
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.nav-search .searchbar input::placeholder{
+    font-size: var(--fs-M);
+    margin-left: 10px;
+}
+
+
+/* nav-extra */
+
+.nav-extra{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-extra li{
+    list-style-type: none;
+}
+
+.nav-extra li a{
+    color: var(--colorTexBlack);
+}
+
+.nav-extra li a:hover{
+    color: var(--colorGreenAccent);
+}
