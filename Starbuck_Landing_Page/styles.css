@@ -93,6 +93,7 @@
 
 .nav-location i{
     cursor: pointer;
+    color: var(--colorGreenAccent);
 }
 
 .nav-location h3{
@@ -154,4 +155,52 @@
 
 .nav-extra li a:hover{
     color: var(--colorGreenAccent);
+}
+
+/* ===== SUBNAVBAR =====*/
+
+#subnavbar{
+    width: 100%;
+    display: flex;
+    font-size: var(--fs-S);
+    font-weight: 400;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .05);
+}
+
+/* subnav-list */
+
+.subnav-list{
+    padding: 0 80px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.subnav-list li{
+    list-style-type: none;
+}
+
+.subnav-list li a{
+    text-decoration: none;
+    color: var(--colorTexBlack);
+}
+
+.subnav-list li a:hover{
+    color: var(--colorGreenAccent);
+}
+
+.subnav-list li a::after{
+    content: "";
+    display: block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--colorGreenAccent);
+    transform: scaleX(0);
+
+}
+
+.subnav-list li a:hover::after{
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
 }
