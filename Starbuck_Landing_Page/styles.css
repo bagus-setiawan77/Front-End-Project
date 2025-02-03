@@ -33,6 +33,16 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* ===== GENERAL ===== */
+
+li{ 
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 
 /* ===== HELPER ===== */
 
@@ -54,6 +64,14 @@
 
 .pz-40{
     padding: 40px;
+}
+
+.pz-20{
+    padding: 20px;
+}
+
+.py-20{
+    padding-top: 20px;
 }
 
 .py-80{
@@ -287,3 +305,34 @@
 .hero-img img:hover{
     transform: translateY(-10px);
 }
+
+/* ===== MENU =====*/
+
+#menu{
+    width: 100%;
+    display: flex;
+}
+
+/* menu-list */
+
+.menu-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-list li a{
+    color: var(--colorTexBlack);
+    font-size: var(--fs-S);
+    font-weight: 400;
+    padding: 5px 15px;
+    transition: .2s ease;
+}
+
+.menu-list li a:hover{
+    background-color: var(--colorGreenAccent);
+    border-radius: 20px;
+    color: var(--colorWhite);
+}
+
