@@ -54,6 +54,10 @@ a{
     margin-top: 20px;
 }
 
+.section-m3{
+    margin-top: 30px;
+}
+
 .section-p1{
     padding-top: 10px;
 }
@@ -319,6 +323,7 @@ a{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
 }
 
@@ -328,11 +333,136 @@ a{
     font-weight: 400;
     padding: 5px 15px;
     transition: .2s ease;
+    border-radius: 20px;
+
 }
 
 .menu-list li a:hover{
     background-color: var(--colorGreenAccent);
-    border-radius: 20px;
     color: var(--colorWhite);
+}
+
+
+/* ===== MENU-PAGE =====*/
+
+#menu-page{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* menu-card */
+
+.menu-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* card-nav */
+
+.card-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--fs-L);
+}
+
+.card-nav h3{
+    cursor: pointer;
+}
+
+.card-nav h3:hover{
+    color: var(--colorGreenAccent);
+}
+
+.card-nav .nav-icon{
+    display: flex;
+    gap: 1rem;
+}
+
+.card-nav .nav-icon i{
+
+}
+
+.card-nav .nav-icon i:first-child{
+    color: var(--colorTextBlackSoft);
+}
+
+.card-nav .nav-icon i:last-child{
+    cursor: pointer;
+}
+
+.card-nav .nav-icon i:last-child:hover{
+    color: var(--colorGreenAccent);
+}
+
+/* card-menu */
+
+.card-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 12%;
+    height: 35vh;
+    background-color: var(--colorWhite);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card-menu .card-menu-img{
+    display: flex;
+    height: 22vh;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+.card-menu .card-menu-img i{
+    color: var(--colorWhite);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    font-size: var(--fs-XL);
+    cursor: pointer;
+}
+
+.card-menu h2{
+    font-size: var(--fs-L);
+}
+
+/* card-menu-price */
+
+.card-menu-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-menu-price h3{
+    font-size: var(--fs-L);
+}
+
+.card-menu-price .plus-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px 12px;
+    border: none;
+    font-size: var(--fs-L);
+    font-weight: 600;
+    color: var(--colorWhite);
+    background-color: var(--colorTexBlack);
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.card-menu-price .plus-btn:hover{
+    transform: translateY(-5px);
 }
 
