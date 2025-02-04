@@ -127,7 +127,12 @@ h5, p{
 /* nav-logo */
 
 .nav-logo{
+}
 
+.nav-logo h2:hover{
+    cursor: pointer;
+    transform: rotate(-10deg);
+    transition: .3s ease;
 }
 
 /* nav-list */
@@ -146,6 +151,20 @@ h5, p{
 .nav-list li a:hover{
     color: var(--colorGreenAccent);
 }
+
+.nav-list li a::after{
+    content: "";
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--colorGreenAccent);
+    transform: scaleX(0);
+}
+
+.nav-list li a:hover::after{
+    transform: scaleX(.5);
+    transition: .2s linear;
+}
+
 
 /* nav-extra */
 
@@ -167,9 +186,19 @@ h5, p{
     cursor: pointer;
 }
 
+.nav-extra .nav-signin:hover{
+    transform: translateY(-2px);
+    transition: .2s ease;
+}
+
 .nav-extra .nav-signup{
     background-color: var(--colorGreenAccent);
     color: var(--colorWhite);
     cursor: pointer;
+}
+
+.nav-extra .nav-signup:hover{
+    transform: translateY(-2px);
+    transition: .2s ease;
 }
 
