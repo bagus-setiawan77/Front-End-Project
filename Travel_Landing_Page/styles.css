@@ -1,0 +1,175 @@
+:root{
+    --bg-green: #006241;
+    --bg-green-dark: #1e3932;
+    --bg-green-light: #00754a;
+    --bg-green-lighter : #d4e9e2;
+    --yellow: #eed350;
+    --light-blue: #b6cbd5;
+    --coral: #d3705a;
+    --teal: #005e66;
+    --turquois: #4c9f87;
+    --goldenro: #c89543;
+    --spring-green: #c0d48b;
+    --blush: #edc4c9;
+
+    --colorWhite: #fff;
+    --colorTexBlack: rgba(0, 0, 0, .87);
+    --colorTextBlackSoft: rgba(0, 0, 0, .58);
+    --colorGreenAccent: #00754a;
+
+    --fs-XXL : 50px;
+    --fs-XL : 24px;
+    --fs-L : 19px;
+    --fs-M: 16px;
+    --fs-S: 14px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+/* ===== GENERAL ===== */
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* ===== FONT SETTINGS */
+
+h1{
+    font-size: var(--fs-XXL);
+}
+
+h2{
+    font-size: var(--fs-XL);
+}
+
+h3{
+    font-size: var(--fs-L);
+}
+
+h4, span{
+    font-size: var(--fs-M);
+}
+
+h5, p{
+    font-size: var(--fs-S);
+}
+
+/* ===== HELPER ===== */
+
+.flex{
+    display: flex;
+}
+
+.flex-dc{
+    flex-direction: column;
+}
+
+.just-c{
+    justify-content: center;
+}
+
+.just-sb{
+    justify-content: space-between;
+}
+
+.just-fs{
+    justify-content: flex-start;
+}
+
+.just-fe{
+    justify-content: flex-end;
+}
+
+.align-c{
+    align-items: center;
+}
+
+.section-m2{
+    margin-top: 20px;
+}
+
+.section-p2{
+    padding-top: 20px;
+}
+
+.padding-8{
+    padding: 0 80px;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+
+}
+
+/* --- NAVBAR --- */
+
+#navbar{
+    width: 100%;
+    height: 8vh;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+}
+
+/* nav-logo */
+
+.nav-logo{
+
+}
+
+/* nav-list */
+
+.nav-list{
+    width: 100%;
+    gap: 2rem;
+}
+
+.nav-list li a{
+    font-size: var(--fs-M);
+    font-weight: 400;
+    color: var(--colorTexBlack);
+}
+
+.nav-list li a:hover{
+    color: var(--colorGreenAccent);
+}
+
+/* nav-extra */
+
+.nav-extra{
+    width: 15%;
+    gap: 1rem;
+}
+
+.nav-extra button{
+    font-size: var(--fs-S);
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+.nav-extra .nav-signin{
+    /* color: rgba(0, 0, 0, .5); */
+    cursor: pointer;
+}
+
+.nav-extra .nav-signup{
+    background-color: var(--colorGreenAccent);
+    color: var(--colorWhite);
+    cursor: pointer;
+}
+
