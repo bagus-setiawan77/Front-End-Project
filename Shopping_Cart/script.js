@@ -22,6 +22,14 @@ const addToCart = productBox => {
     const productTitle = productBox.querySelector('.product-title').textContent;
     const productPrice = productBox.querySelector('.price').textContent;
 
+    const cartItems = cartContent.querySelectorAll('.cart-product-title');
+    for(let item of cartItems){
+        if (item.textContent === productTitle){
+            alert("This item is already in the cart.")
+            return;
+        }
+    }
+
     const cartBox = document.createElement('div');
     cartBox.classList.add('cart-box');
     cartBox.innerHTML = `
@@ -37,5 +45,28 @@ const addToCart = productBox => {
         </div>
         <i class="ri-delete-bin-2-line cart-remove"></i>
     `;
+
     cartContent.appendChild(cartBox);
+
+    cartBox.querySelector('.cart-remove').addEventListener('click', () => {
+        cartBox.remove();
+    })
+
+    cartBox.querySelector('.cart-quantity').addEventListener('click', event => {
+        const numberElement = cartBox.querySelector('.number');
+        const decrementButton = cartBox.querySelector('#decrement');
+        let quantity = numberElement.textContent;
+
+        if (event.target.id === 'decrement' && quantity > 1) {
+            quantity--;
+            if(quantity === 1) {
+                decrementButton.style.color = "#999"
+            }
+        } else if (event.target.id === 'increment') {
+            quantity++;
+            decrementButton.style.color = '#333'
+        }
+
+        numberElement.textContent = quantity;
+    })
 };
