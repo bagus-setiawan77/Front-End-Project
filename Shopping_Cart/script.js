@@ -50,6 +50,10 @@ const addToCart = productBox => {
 
     cartBox.querySelector('.cart-remove').addEventListener('click', () => {
         cartBox.remove();
+        
+        updateCartCount(-1);
+
+        updateTotalPrice();
     })
 
     cartBox.querySelector('.cart-quantity').addEventListener('click', event => {
@@ -68,5 +72,57 @@ const addToCart = productBox => {
         }
 
         numberElement.textContent = quantity;
+
+        updateTotalPrice();
     })
+
+    updateCartCount(1);
+
+    updateTotalPrice();
 };
+
+const updateTotalPrice = () =>{
+    const totalPriceElement = document.querySelector('.total-price');
+    const cartBoxes = cartContent.querySelectorAll(".cart-box");
+    let total = 0;
+    cartBoxes.forEach(cartBox => {
+        const priceElement = document.querySelector(".cart-price");
+        const quantityElement = cartBox.querySelector(".number");
+        const price = priceElement.textContent.replace("$", "");
+        const quantity = quantityElement.textContent;
+        total += price * quantity;
+    })
+    totalPriceElement.textContent = `$${total}`;
+}
+
+let cartItemCount = 0;
+const updateCartCount = change => {
+    const cartItemCartCountBadge = document.querySelector('.cart-item-count')
+    cartItemCount += change;
+    if (cartItemCount > 0){
+        cartItemCartCountBadge.style.visibility = "visible";
+        cartItemCartCountBadge.textContent = cartItemCount;
+    } else {
+        cartItemCartCountBadge.style.visibility = 'hidden';
+        cartItemCartCountBadge.textContent = '';
+    }
+};
+
+const buyNowButton = document.querySelector('.btn-buy');
+buyNowButton.addEventListener('click', () => {
+    const cartBoxes = cartContent.querySelectorAll('.cart-box');
+    if (cartBoxes.length === 0){
+        alert('Your cart is empty. Please add items to your cart before buying.');
+        return;
+    }
+
+    cartBoxes.forEach(cartBox => cartBox.remove());
+
+    cartItemCount = 0;
+    updateCartCount(0);
+
+    updateTotalPrice();
+
+    alert("Thankyou for your Purchase")
+})
+
