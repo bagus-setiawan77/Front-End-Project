@@ -3,37 +3,37 @@ const asideBar = document.getElementById("aside");
 const bagClose = document.querySelector(".aside-close");
 
 bagOpen.addEventListener("click", () => {
-  asideBar.classList.add("active");
+    asideBar.classList.add("active");
 });
 bagClose.addEventListener("click", () => {
-  asideBar.classList.remove("active");
+    asideBar.classList.remove("active");
 });
 
 const plusBtn = document.querySelectorAll(".plus-btn");
 plusBtn.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const menuAside = event.target.closest(".card-menu");
-    addtoMenu(menuAside);
-  });
+        button.addEventListener("click", (event) => {
+        const menuAside = event.target.closest(".card-menu");
+        addtoMenu(menuAside);
+    });
 });
 
 const asideContent = document.querySelector(".aside-content");
 const addtoMenu = (menuAside) => {
-  const menuImgSrc = menuAside.querySelector("img").src;
-  const menuTitle = menuAside.querySelector(".card-menu-title").textContent;
-  const menuPrice = menuAside.querySelector(".card-menu-price").textContent;
+    const menuImgSrc = menuAside.querySelector("img").src;
+    const menuTitle = menuAside.querySelector(".card-menu-title").textContent;
+    const menuPrice = menuAside.querySelector(".card-menu-price").textContent;
 
-  const menuItems = asideContent.querySelectorAll(".card-menu-title");
-  for (let item of menuItems) {
-    if (item === menuTitle) {
-      alert("nope");
-      return;
+    const menuItems = asideContent.querySelectorAll(".aside-menu-title");
+    for (let item of menuItems) {
+        if (item.textContent === menuTitle) {
+            alert("Menu was ready in Order");
+            return;
+        }
     }
-  }
 
-  const asideMenu = document.createElement("div");
-  asideMenu.classList.add(".aside-menu");
-  asideMenu.innerHTML = `
+    const asideMenu = document.createElement("div");
+    asideMenu.classList.add(".aside-menu");
+    asideMenu.innerHTML = `
         <div class="aside-menu">
             <div class="aside-menu-img">
                 <img src="${menuImgSrc}" alt="">
@@ -48,10 +48,16 @@ const addtoMenu = (menuAside) => {
                 </div>
             </div>
             <div class="aside-menu-delete">
-                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-trash aside-remove"></i>
             </div>
         </div>
     `;
 
-  asideContent.append(asideMenu);
+    asideContent.append(asideMenu);
+
+    asideMenu.querySelector('.aside-remove').addEventListener('click', () => {
+    asideMenu.remove();
+    
+    })
+
 };
