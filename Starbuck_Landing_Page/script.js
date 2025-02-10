@@ -40,11 +40,11 @@ const addtoMenu = (menuAside) => {
             </div>
             <div class="aside-menu-detail">
                 <h1 class='aside-menu-title'>${menuTitle}</h1>
-                <h2 class='aside-menu-price'>$${menuPrice}</h2>
+                <h2 class='aside-menu-price'>${menuPrice}</h2>
                 <div class="aside-menu-btn">
-                    <button class="decrement-btn">-</button>
+                    <button id="decrement-btn">-</button>
                     <h2 class="aside-menu-count">1</h2>
-                    <button class="increment-btn">+</button>
+                    <button id="increment-btn">+</button>
                 </div>
             </div>
             <div class="aside-menu-delete">
@@ -56,8 +56,28 @@ const addtoMenu = (menuAside) => {
     asideContent.append(asideMenu);
 
     asideMenu.querySelector('.aside-remove').addEventListener('click', () => {
-    asideMenu.remove();
-    
+        asideMenu.remove();
+
+    })
+
+    asideMenu.querySelector('.aside-menu-btn').addEventListener('click', event => {
+        const numberElement = asideMenu.querySelector('.aside-menu-count');
+        const decrementElement = asideMenu.querySelector('#decrement-btn');
+        let quantity = numberElement.textContent;
+
+        if(event.target.id === 'decrement-btn' && quantity > 1){
+            quantity--;
+            if(quantity === 1){
+                decrementElement.style.color = "#333";
+            }
+        } else if (event.target.id === 'increment-btn'){
+            quantity++;
+            decrementElement.style.color = "#fff";
+        }
+
+        numberElement.textContent = quantity;
+
+        
     })
 
 };
