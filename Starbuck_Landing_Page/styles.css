@@ -260,22 +260,26 @@ a{
 
 .aside-menu-img{
     display: flex;
-    width: 100%;
+    width: 75%;
 }
 
 .aside-menu-img img{
     border-radius: 20px;
-    /* width: 100%; */
+    object-fit: cover;
+    width: 100%;
 }
 
 
 .aside-menu-detail{
     display: flex;
+    margin-left: 20px;
     width: 100%;
+    height: 100%;
     flex-direction: column; 
     align-items: flex-start;
     text-align: left;
-    justify-content: space-between;  
+    justify-items: space-between;  
+    gap: .5rem;
 }
 
 .aside-menu-detail h1{
@@ -303,7 +307,7 @@ a{
     color: var(--colorWhite);
 }
 
-.aside-menu-detail .menu-btn .count{
+.aside-menu-detail .menu-btn .menu-count{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,6 +337,42 @@ a{
 
 .aside-menu-delete i:hover{
     color: var(--coral);
+}
+
+.aside-total{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 75px;
+    padding: 10px 20px 0 20px;
+    margin-top: 20px;
+    border-top: 2px solid var(--colorWhite);
+    color: var(--colorWhite);
+}
+
+.aside-confirm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside-confirm button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: var(--fs-XL);
+    font-weight: 600;
+    background-color: var(--colorWhite);
+    color: var(--colorGreenAccent);
+    transition: .3s ease;
+}
+
+.aside-confirm button:hover{
+    background-color: var(--coral);
+    color: var(--colorWhite);
 }
 
 /* ===== SUBNAVBAR =====*/
@@ -496,7 +536,9 @@ a{
 #menu-page{
     display: flex;
     flex-direction: column;
-
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 /* menu-card */
@@ -554,8 +596,8 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 12%;
-    height: 35vh;
+    width: 18%;
+    height: 50vh;
     background-color: var(--colorWhite);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     border-radius: 10px;
@@ -564,11 +606,20 @@ a{
 
 .card-menu .card-menu-img{
     display: flex;
-    height: 22vh;
-    border-radius: 10px;
+    height: 35vh;
     background-color: rgba(0, 0, 0, .2);
     position: relative;
+    border-radius: 10px;
 }
+
+.card-menu .card-menu-img img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 10px;
+}
+
 
 .card-menu .card-menu-img i{
     color: var(--colorWhite);
